@@ -1,0 +1,89 @@
+header{
+    text-align: center;
+    margin-top: 30px;
+    font-size: 30px;
+    font-weight: bold;
+}
+article{
+    display: grid;
+    grid-template-areas: "aa aa aa bb bb bb cc cc cc " ;
+    gap: 1em;
+   
+}
+
+section{
+    border: 3px solid black;
+    position: relative;
+    
+}
+section > p{
+    padding: 3% 3px 0 3px ;
+}
+.one ,.two ,.three{
+    background-color: aqua;
+}
+.one{
+    grid-area: aa;
+}
+.two{
+    grid-area: bb;
+}
+.three{
+    grid-area: cc;
+}
+.A{
+    background-color: chocolate;
+}
+.B{
+    background-color: brown;
+    color: white;
+}
+.C{
+    background-color: bisque;
+}
+.one::after{
+    content: "Chicken";
+    background-color: burlywood;
+    border: 2px solid black;
+    position: absolute;
+    top: -2px;
+    right: -2px;
+    width: 70px;
+    height: 20px;
+    text-align: center;
+}
+.two::after{
+    content: "Beef";
+    background-color: brown;
+    border: 2px solid black;
+    color: white    ;
+    position: absolute;
+    top: -2px;
+    right: -2px;
+    width: 70px;
+    height: 20px;
+    text-align: center;
+}
+.three::after{
+    content: "Sushi";
+    background-color: cadetblue;
+    border: 2px solid black;
+    position: absolute;
+    top: -2px;
+    right: -2px;
+    width: 70px;
+    height: 20px;
+    text-align: center;
+}
+/*tablet mode*/
+@media(min-width:768px) and (max-width:991px) {
+    article{
+        grid-template-areas: "aa aa aa bb bb bb" "cc cc cc cc cc cc";
+    }
+}
+/*mobile mode*/
+@media (max-width:767px) {
+    article{
+        grid-template-areas: "aa aa aa " "bb bb bb" "cc cc cc";
+    }
+}
